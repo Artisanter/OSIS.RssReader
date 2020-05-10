@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIS.RssReader.UWP", "OSIS.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIS.RssReader.GTK", "OSIS.RssReader.GTK\OSIS.RssReader.GTK.csproj", "{3E39A52B-91DC-439F-AE86-B577C10FA180}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIS.RssReader.Android", "OSIS.RssReader\OSIS.RssReader.Android\OSIS.RssReader.Android.csproj", "{E290040F-8314-4A0A-8525-8DC48B42DB29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,30 @@ Global
 		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|x64.Build.0 = Release|Any CPU
 		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|x86.ActiveCfg = Release|Any CPU
 		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|x86.Build.0 = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|ARM.Build.0 = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|ARM.Deploy.0 = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|x64.Build.0 = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|x86.Build.0 = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|ARM.Build.0 = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|ARM.Deploy.0 = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|x64.ActiveCfg = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|x64.Build.0 = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|x64.Deploy.0 = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|x86.ActiveCfg = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|x86.Build.0 = Release|Any CPU
+		{E290040F-8314-4A0A-8525-8DC48B42DB29}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

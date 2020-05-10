@@ -34,7 +34,7 @@ namespace OSIS.RssReader.ViewModels.Menu
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"]
             };
 
-            //IsPresented = false;
+            IsPresented = false;
         }
     }
 }

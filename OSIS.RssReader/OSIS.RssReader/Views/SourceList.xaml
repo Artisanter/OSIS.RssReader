@@ -47,7 +47,7 @@
                                 <controls:CircleImage Grid.Row="0" Grid.Column="0" HeightRequest="60" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Aspect="AspectFill" WidthRequest="60" Grid.RowSpan="3" Source="{Binding ImagePath}" />
                                 <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" VerticalOptions="End" FontSize="Medium" FontAttributes="Bold" />
                                 <Label Grid.Row="1" Grid.Column="1" Text="{Binding SourceUrl}" VerticalOptions="End" FontSize="Small" FontAttributes="Bold" />
-                                <ImageButton Grid.Row="1" Grid.Column="2" Source="Images/delete.png" Clicked="OnDelete" CommandParameter="{Binding Id}"/>
+                                <ImageButton Grid.Row="1" Grid.Column="2" Source="delete.png" Clicked="OnDelete" CommandParameter="{Binding Id}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

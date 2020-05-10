@@ -24,23 +24,22 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <controls:CircleImage Grid.Row="0" Grid.Column="0" HeightRequest="100" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Aspect="AspectFill" WidthRequest="100" Grid.RowSpan="3">
+                                <controls:CircleImage Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Aspect="AspectFill" WidthRequest="100" Grid.RowSpan="2">
                                     <controls:CircleImage.Source>
                                         <UriImageSource Uri="{Binding ImageUrl}" CacheValidity="14" CachingEnabled="true"/>
                                     </controls:CircleImage.Source>
                                 </controls:CircleImage>
                                 <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" VerticalOptions="End" FontSize="Medium" FontAttributes="Bold" />
-                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Description}" VerticalOptions="End" FontSize="Small" />
-                                <ImageButton Grid.Row="1" Grid.Column="2" Source="Images/save.png" Clicked="OnSaveForLater" CommandParameter="{Binding}"
+                                <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Description}" VerticalOptions="End" FontSize="Small" WidthRequest="200"/>
+                                <ImageButton Grid.Row="0" Grid.Column="2" Source="save.png" Clicked="OnSaveForLater" CommandParameter="{Binding}"
                                              IsVisible="{Binding NotSaved}"/>
-                                <ImageButton Grid.Row="1" Grid.Column="2" Source="Images/delete.png" Clicked="OnDelete" CommandParameter="{Binding}"
+                                <ImageButton Grid.Row="0" Grid.Column="2" Source="delete.png" Clicked="OnDelete" CommandParameter="{Binding}"
                                              IsVisible="{Binding Saved}"/>
                             </Grid>
                         </ViewCell>

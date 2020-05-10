@@ -9,7 +9,7 @@
              Title="master">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource PrimaryColor}" VerticalOptions="FillAndExpand">
-            <Image Source="Images/rssreader_logo.png"
+            <Image Source="rssreader_logo.png"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <ListView x:Name="MenuListView">

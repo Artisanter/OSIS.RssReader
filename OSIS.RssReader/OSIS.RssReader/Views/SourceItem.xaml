@@ -5,7 +5,7 @@
              x:Class="OSIS.RssReader.Views.SourceItem" x:Name="SourceItemPage" Title="Source"
              x:DataType="viewModels:SourceItemViewModel">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding SaveSourceItem}" Order="Primary" Priority="0" Text="Save" IconImageSource="Images/save.png"/>
+        <ToolbarItem Command="{Binding SaveSourceItem}" Order="Primary" Priority="0" Text="Save" IconImageSource="save.png"/>
 
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
