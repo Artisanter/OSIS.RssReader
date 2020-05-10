@@ -10,10 +10,6 @@ namespace OSIS.RssReader.Data
 
         public string Description { get; set; }
 
-        public string Header { get; set; }
-
-        public string Category { get; set; }
-
         public string NewsSource { get; set; }
 
         public string Link { get; set; }

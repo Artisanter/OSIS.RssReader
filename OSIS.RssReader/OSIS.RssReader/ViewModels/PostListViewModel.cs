@@ -123,7 +123,7 @@ namespace OSIS.RssReader.ViewModels
         {
             if (!_repo.Exists(post.Link))
             {
-                post.HtmlPost = await PageDownload.Start(post.Link);
+                post.HtmlPost = await WebHelper.Download(post.Link);
                 _repo.SavePost(post);
             }
         }

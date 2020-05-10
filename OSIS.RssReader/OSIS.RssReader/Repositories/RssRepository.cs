@@ -1,24 +1,25 @@
+using OSIS.RssReader.Data;
 using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
-using OSIS.RssReader.Data;
 
 namespace OSIS.RssReader.Repositories
 {
     public class RssRepository : IDisposable
     {
-        private readonly RssDatabase _db ;
+        private readonly RssDatabase _db;
+
 
         public RssRepository()
         {
             _db = new RssDatabase();
         }
 
+
         public void Dispose() { }
 
         public bool Exists(string link)
         {
-            var result = GetPost(f => f.Link.Contains(link));
+            var result = _db.GetItems<Post>(f => f.Link.Contains(link));
 
             return result.Count != 0;
         }
@@ -43,11 +44,6 @@ namespace OSIS.RssReader.Repositories
         {
             _db.DeleteItem<Post>(id);
         }
-
-        private List<Post> GetPost(Expression<Func<Post, bool>> func)
-        {
-            return _db.GetItems(func);
-        }
         #endregion
 
         #region Source
@@ -69,11 +65,6 @@ namespace OSIS.RssReader.Repositories
         public int DeleteSource(int id)
         {
             return _db.DeleteItem<Source>(id);
-        }
-
-        public List<Source> GetSource(Expression<Func<Source, bool>> func)
-        {
-            return _db.GetItems(func);
         }
         #endregion
     }

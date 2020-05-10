@@ -16,7 +16,6 @@ namespace OSIS.RssReader.Web
             var list = document.Descendants("item")
                 .Select(itm => new Post
                 {
-                    Category = itm.Element("category")?.Value,
                     Title = itm.Element("title")?.Value,
                     Description = ReduceString(itm.Element("description")?.Value),
                     Link = itm.Element("link")?.Value,

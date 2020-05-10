@@ -32,7 +32,7 @@ namespace OSIS.RssReader.Repositories
             }
         }
 
-        public List<T> GetItems<T>() where T : ITableEntityRssReader, new()
+        public List<T> GetItems<T>() where T : ITableEntity, new()
         {
             lock (Locker)
             {
@@ -40,14 +40,14 @@ namespace OSIS.RssReader.Repositories
             }
         }
 
-        public List<T> GetItems<T>(Expression<Func<T, bool>> func) where T : ITableEntityRssReader, new()
+        public List<T> GetItems<T>(Expression<Func<T, bool>> func) where T : ITableEntity, new()
         {
             lock (Locker)
             {
                 return _database.Table<T>().Where(func).ToList();
             }
         }
-        public T GetItem<T>(int id) where T : ITableEntityRssReader, new()
+        public T GetItem<T>(int id) where T : ITableEntity, new()
         {
             lock (Locker)
             {
@@ -55,7 +55,7 @@ namespace OSIS.RssReader.Repositories
             }
         }
 
-        public int SaveItem<T>(T item) where T : ITableEntityRssReader
+        public int SaveItem<T>(T item) where T : ITableEntity
         {
             lock (Locker)
             {
@@ -69,7 +69,7 @@ namespace OSIS.RssReader.Repositories
             }
         }
 
-        public int DeleteItem<T>(int id) where T : ITableEntityRssReader, new()
+        public int DeleteItem<T>(int id) where T : ITableEntity, new()
         {
             lock (Locker)
             {

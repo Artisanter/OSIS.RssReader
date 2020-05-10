@@ -32,7 +32,6 @@ namespace OSIS.RssReader.ViewModels
 
             Title = post.Title;
             Description = post.Description;
-            Category = post.Category;
             NewsSource = post.NewsSource;
             Link = post.Link;
             ImageUrl = post.ImageUrl;
@@ -94,7 +93,6 @@ namespace OSIS.RssReader.ViewModels
             }
             post.Title = Title;
             post.Description = Description;
-            post.Category = Category;
             post.NewsSource = NewsSource;
             post.Link = Link;
             post.ImageUrl = ImageUrl;
