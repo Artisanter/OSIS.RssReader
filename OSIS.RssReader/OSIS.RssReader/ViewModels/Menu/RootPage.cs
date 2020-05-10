@@ -18,7 +18,7 @@ namespace OSIS.RssReader.ViewModels.Menu
                 BarTextColor = Color.White,
                 BarBackgroundColor = (Color) Application.Current.Resources["PrimaryColor"]
             };
-
+            
             this.MasterBehavior = MasterBehavior.Popover;
         }
 
@@ -34,7 +34,7 @@ namespace OSIS.RssReader.ViewModels.Menu
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"]
             };
 
-            IsPresented = false;
+            //IsPresented = false;
         }
     }
 }

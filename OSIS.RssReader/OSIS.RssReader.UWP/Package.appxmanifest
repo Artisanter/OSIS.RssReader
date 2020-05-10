@@ -9,7 +9,7 @@
   <Identity
     Name="7fdb1a7c-36e0-4878-9f90-5b20aac812ec"
     Publisher="CN=Eugene"
-    Version="1.0.4.0" />
+    Version="1.0.5.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

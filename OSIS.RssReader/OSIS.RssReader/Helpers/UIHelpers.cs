@@ -6,12 +6,7 @@ namespace OSIS.RssReader.Helpers
     {
         public static string SetOsImagePath(string imageName)
         {
-            if (Device.RuntimePlatform == Device.UWP)
-            {
-                return "Images/" + imageName;
-            }
-
-            return imageName;
+            return "Images/" + imageName;
         }
     }
 }

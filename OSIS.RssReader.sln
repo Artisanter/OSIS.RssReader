@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIS.RssReader", "OSIS.RssReader\OSIS.RssReader\OSIS.RssReader.csproj", "{E60C702C-36C4-4A87-83EC-8DDEAB7F3BAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSIS.RssReader", "OSIS.RssReader\OSIS.RssReader\OSIS.RssReader.csproj", "{E60C702C-36C4-4A87-83EC-8DDEAB7F3BAC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIS.RssReader.UWP", "OSIS.RssReader\OSIS.RssReader.UWP\OSIS.RssReader.UWP.csproj", "{B1164065-D567-4D9E-8ABE-674B02E3F8B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIS.RssReader.GTK", "OSIS.RssReader.GTK\OSIS.RssReader.GTK.csproj", "{3E39A52B-91DC-439F-AE86-B577C10FA180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,22 @@ Global
 		{B1164065-D567-4D9E-8ABE-674B02E3F8B0}.Release|x86.ActiveCfg = Release|x86
 		{B1164065-D567-4D9E-8ABE-674B02E3F8B0}.Release|x86.Build.0 = Release|x86
 		{B1164065-D567-4D9E-8ABE-674B02E3F8B0}.Release|x86.Deploy.0 = Release|x86
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Debug|ARM.Build.0 = Debug|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Debug|x64.Build.0 = Debug|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Debug|x86.Build.0 = Debug|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|ARM.ActiveCfg = Release|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|ARM.Build.0 = Release|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|x64.ActiveCfg = Release|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|x64.Build.0 = Release|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|x86.ActiveCfg = Release|Any CPU
+		{3E39A52B-91DC-439F-AE86-B577C10FA180}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -97,10 +97,7 @@ namespace OSIS.RssReader.ViewModels
         {
             if (newList != null)
             {
-                foreach (var post in newList)
-                {
-                    PostsList.Add(post);
-                }
+                PostsList = new ObservableCollection<Post>(newList);
                 ItemNumber = newList.Count;
             }
             else
