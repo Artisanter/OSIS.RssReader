@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:viewModels="clr-namespace:OSIS.RssReader.ViewModels;assembly=OSIS.RssReader"
+             xmlns:data="clr-namespace:OSIS.RssReader.Data;assembly=OSIS.RssReader"
+             x:Class="OSIS.RssReader.Views.PostList" Title="RSS Posts" x:Name="PostPage" x:DataType="viewModels:PostListViewModel">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <StackLayout Spacing="0">
+                <SearchBar x:Name="SearchBar" Placeholder="Search a post" TextChanged="OnTextChanged" />
+                <Button x:Name="ButtonShow" Text="Show post saved" Clicked="ButtonShow_Clicked" />
+                <Label Text="{Binding ItemNumberText}" TextColor="Black" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="{Binding ShowEmpty}" Spacing="0">
+                <Label Text="No posts found. Did you set up your sources?" HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <ListView ItemsSource="{Binding PostsList}" ItemTapped="Handle_ItemTapped" ItemSelected="Handle_ItemSelected"
+                HasUnevenRows="true" IsVisible="{Binding ShowListView}" IsPullToRefreshEnabled="true" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell x:DataType="data:Post">
+                            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <controls:CircleImage Grid.Row="0" Grid.Column="0" HeightRequest="100" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Aspect="AspectFill" WidthRequest="100" Grid.RowSpan="3">
+                                    <controls:CircleImage.Source>
+                                        <UriImageSource Uri="{Binding ImageUrl}" CacheValidity="14" CachingEnabled="true"/>
+                                    </controls:CircleImage.Source>
+                                </controls:CircleImage>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" VerticalOptions="End" FontSize="Medium" FontAttributes="Bold" />
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Description}" VerticalOptions="End" FontSize="Small" />
+                                <ImageButton Grid.Row="1" Grid.Column="2" Source="Images/save.png" Clicked="OnSaveForLater" CommandParameter="{Binding}"
+                                             IsVisible="{Binding NotSaved}"/>
+                                <ImageButton Grid.Row="1" Grid.Column="2" Source="Images/delete.png" Clicked="OnDelete" CommandParameter="{Binding}"
+                                             IsVisible="{Binding Saved}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ContentView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" IsVisible="{Binding IsBusy, Mode=OneWay}" BackgroundColor="White" Padding="10, 0">
+                <ActivityIndicator WidthRequest="110" HeightRequest="70" IsRunning="True" IsVisible="True" Color="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            </ContentView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

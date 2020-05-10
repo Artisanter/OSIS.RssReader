@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:OSIS.RssReader.ViewModels;assembly=OSIS.RssReader"
+             x:Class="OSIS.RssReader.Views.SourceItem" x:Name="SourceItemPage" Title="Source"
+             x:DataType="viewModels:SourceItemViewModel">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding SaveSourceItem}" Order="Primary" Priority="0" Text="Save" IconImageSource="Images/save.png"/>
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <ContentView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" IsVisible="{Binding IsBusy, Mode=OneWay}" BackgroundColor="White" Padding="10, 0">
+                    <ActivityIndicator WidthRequest="110" HeightRequest="70" IsRunning="True" IsVisible="True" Color="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                </ContentView>
+
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Title\Description" />
+                    </StackLayout>
+                    <Entry Text="{Binding Title}" HorizontalOptions="FillAndExpand" />
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="RSS Feed Url" />
+                    </StackLayout>
+                    <Entry Text="{Binding SourceUrl}" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

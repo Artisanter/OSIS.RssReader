@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:OSIS.RssReader.ViewModels;assembly=OSIS.RssReader"
+             x:Class="OSIS.RssReader.Views.PostItem" x:Name="PostItemPage" Title="{Binding Title}" x:DataType="viewModels:PostItemViewModel">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#fca">
+            <StackLayout>
+                <ContentView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" IsVisible="{Binding IsBusy, Mode=OneWay}" BackgroundColor="White" Padding="10, 0">
+                    <ActivityIndicator WidthRequest="110" HeightRequest="70" IsRunning="True" IsVisible="True" Color="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                </ContentView>
+                <WebView x:Name="Browser" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Source="{Binding Link}" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

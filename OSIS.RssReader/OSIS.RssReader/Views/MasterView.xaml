@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:menu="clr-namespace:OSIS.RssReader.ViewModels.Menu;assembly=OSIS.RssReader"
+             mc:Ignorable="d"
+             x:Class="OSIS.RssReader.Views.MasterView"
+             Title="master">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource PrimaryColor}" VerticalOptions="FillAndExpand">
+            <Image Source="Images/rssreader_logo.png"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="MenuListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" x:DataType="menu:MainMenuItem">
+                                <Image Source="{Binding IconSource}"/>
+                                <Label Text="{Binding Title}" TextColor="{StaticResource MenuTextColor}" VerticalOptions="CenterAndExpand" FontSize="Medium"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
