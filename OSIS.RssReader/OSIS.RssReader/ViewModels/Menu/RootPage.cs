@@ -13,11 +13,7 @@ namespace OSIS.RssReader.ViewModels.Menu
 
             Master = menuPage;
 
-            Detail = new NavigationPage(new PostList())
-            {
-                BarTextColor = Color.White,
-                BarBackgroundColor = (Color) Application.Current.Resources["PrimaryColor"]
-            };
+            SetDetailPage(new PostList());
             
             this.MasterBehavior = MasterBehavior.Popover;
         }
@@ -28,13 +24,18 @@ namespace OSIS.RssReader.ViewModels.Menu
                 return;
 
             var displayPage = (Page)Activator.CreateInstance(menu.TargetType);
-            Detail = new NavigationPage(displayPage)
-            {
-                BarTextColor = Color.White,
-                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"]
-            };
+            SetDetailPage(displayPage);
 
             IsPresented = false;
+        }
+
+        private void SetDetailPage(Page page)
+        {
+            Detail = new NavigationPage(page)
+            {
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"]
+            };
         }
     }
 }

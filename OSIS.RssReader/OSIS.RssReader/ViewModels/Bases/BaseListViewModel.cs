@@ -7,8 +7,6 @@ namespace OSIS.RssReader.ViewModels.Bases
         private string _itemNumberText = "";
 
 
-        public abstract void DeleteItem(int id);
-
         protected int ItemNumber { get; set; }
 
         public string ItemNumberText
@@ -27,5 +25,8 @@ namespace OSIS.RssReader.ViewModels.Bases
             get => _showListView;
             set => OnPropertyChanging(nameof(ShowListView), ref _showListView, value);
         }
-    }   
+
+
+        public abstract void DeleteItem(int id);
+    }
 }

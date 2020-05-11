@@ -1,5 +1,4 @@
 using OSIS.RssReader.Data;
-using OSIS.RssReader.Extensions;
 using OSIS.RssReader.Repositories;
 using OSIS.RssReader.ViewModels.Bases;
 using OSIS.RssReader.Web;
@@ -16,27 +15,20 @@ namespace OSIS.RssReader.ViewModels
         private readonly RssRepository _repo = new RssRepository();
         private ObservableCollection<Post> _postsList;
 
+
         public ObservableCollection<Post> PostsList
         {
             get => _postsList;
-            set
-            {
-                if(value == _postsList)
-                    return;
-
-                _postsList = value;
-                OnPropertyChanged(nameof(PostsList));
-            }
+            set => OnPropertyChanging(nameof(PostsList), ref _postsList, value);
         }
 
 
-        public bool ShowSaveForLater;
+        public bool ShowSaveForLater { get; set; }
 
 
         public PostListViewModel(bool showLater)
         {
             ShowSaveForLater = showLater;
-            //LoadData();
         }
 
         public override void DeleteItem(int id)
@@ -84,7 +76,7 @@ namespace OSIS.RssReader.ViewModels
                 return;
 
 
-            PostsList.RemoveAll();
+            PostsList.Clear();
 
             var news = _list;
             if (!string.IsNullOrEmpty(search))
@@ -130,12 +122,12 @@ namespace OSIS.RssReader.ViewModels
 
         public void DeletePost(Post post)
         {
-            if (_repo.Exists(post.Link))
-            {
-                _repo.DeletePost(post.Id);
-                _list.Remove(post);
-                CreateListForUi(_list);
-            }
+            if (!_repo.Exists(post.Link))
+                return;
+
+            _repo.DeletePost(post.Id);
+            _list.Remove(post);
+            CreateListForUi(_list);
         }
     }
 }

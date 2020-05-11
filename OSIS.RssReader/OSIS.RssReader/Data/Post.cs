@@ -4,7 +4,7 @@ using System;
 namespace OSIS.RssReader.Data
 {
     [Table("Post")]
-    public class Post : BaseTableRssReader
+    public class Post : BaseTableEntity
     {
         public string Title { get; set; }
 

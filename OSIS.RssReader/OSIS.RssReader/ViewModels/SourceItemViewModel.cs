@@ -20,7 +20,7 @@ namespace OSIS.RssReader.ViewModels
         }
 
 
-        public void LoadData()
+        private void LoadData()
         {
             if (Id == 0)
                 return;

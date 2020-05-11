@@ -18,12 +18,7 @@ namespace OSIS.RssReader.ViewModels.Bases
 
         protected void OnPropertyChanging<T>(string name, ref T property, T value)
         {
-            if (property is null)
-            {
-                if(value is null)
-                    return;
-            }
-            else if (property.Equals(value))
+            if (property is null && value is null || property != null && property.Equals(value))
             {
                 return;
             }

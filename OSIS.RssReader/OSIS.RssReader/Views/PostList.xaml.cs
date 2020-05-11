@@ -12,10 +12,12 @@ namespace OSIS.RssReader.Views
         private PostListViewModel _viewModel;
         private bool _showLater;
 
+
         public PostList()
         {
             InitializeComponent();
         }
+
 
         private void LoadViewModel()
         {
@@ -40,10 +42,10 @@ namespace OSIS.RssReader.Views
 
         private async void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (!(((ListView)sender).SelectedItem is Post post))
-                return;
-
-            await Navigation.PushAsync(new PostItem(post), true);
+            if (((ListView) sender).SelectedItem is Post post)
+            {
+                await Navigation.PushAsync(new PostItem(post), true);
+            }
         }
 
         private async void OnSaveForLater(object sender, EventArgs e)

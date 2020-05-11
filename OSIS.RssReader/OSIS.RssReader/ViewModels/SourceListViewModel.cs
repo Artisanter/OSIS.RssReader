@@ -22,7 +22,7 @@ namespace OSIS.RssReader.ViewModels
             LoadData();
         }
 
-        public void LoadData(string search = "")
+        private void LoadData(string search = "")
         {
             IsBusy = true;
 

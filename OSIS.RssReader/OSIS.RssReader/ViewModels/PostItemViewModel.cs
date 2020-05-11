@@ -75,7 +75,7 @@ namespace OSIS.RssReader.ViewModels
 
         private ICommand _saveCommand;
 
-        public ICommand SavePostItem => _saveCommand ?? (_saveCommand = new Command(() => ExecuteSavePostCommand()));
+        public ICommand SavePostItem => _saveCommand ??= new Command(ExecuteSavePostCommand);
 
         private void ExecuteSavePostCommand()
         {

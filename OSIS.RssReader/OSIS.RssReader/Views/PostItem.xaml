@@ -9,7 +9,7 @@
                 <ContentView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" IsVisible="{Binding IsBusy, Mode=OneWay}" BackgroundColor="White" Padding="10, 0">
                     <ActivityIndicator WidthRequest="110" HeightRequest="70" IsRunning="True" IsVisible="True" Color="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
                 </ContentView>
-                <WebView x:Name="Browser" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Source="{Binding Link}" />
+                <WebView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Source="{Binding Link}" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
